@@ -45,4 +45,45 @@ public class SortTester {
     assertArrayEquals(original, expected);
   } // orderedStringTest
 
+  @Test
+  public void testWithDuplicateElements() {
+      Integer[] original = {4, 2, 3, 2, 1};
+      Integer[] expected = {1, 2, 2, 3, 4};
+      sorter.sort(original, Comparator.naturalOrder());
+      assertArrayEquals(expected, original, "Testing with duplicate elements.");
+  }
+
+  @Test
+  public void testWithSingleElement() {
+      Integer[] original = {42};
+      Integer[] expected = {42};
+      sorter.sort(original, Comparator.naturalOrder());
+      assertArrayEquals(expected, original, "Testing with a single element.");
+  }
+
+  @Test
+  public void testWithEmptyArray() {
+      Integer[] original = {};
+      Integer[] expected = {};
+      sorter.sort(original, Comparator.naturalOrder());
+      assertArrayEquals(expected, original, "Testing with an empty array.");
+  }
+
+  @Test
+  public void testWithNegativeNumbers() {
+      Integer[] original = {-3, -1, -4, -2};
+      Integer[] expected = {-4, -3, -2, -1};
+      sorter.sort(original, Comparator.naturalOrder());
+      assertArrayEquals(expected, original, "Testing with negative numbers.");
+  }
+
+  @Test
+  public void testWithRandomlyOrderedElements() {
+      Integer[] original = {5, 3, 8, 1, 2};
+      Integer[] expected = {1, 2, 3, 5, 8};
+      sorter.sort(original, Comparator.naturalOrder());
+      assertArrayEquals(expected, original, "Testing with randomly ordered elements.");
+  }
 } // class SortTester
+
+
