@@ -6,11 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import java.math.BigInteger;
 import org.junit.jupiter.api.Test;
+import java.util.Comparator;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  * Tests of Sorter objects.
  *
- * @author Your Name
+ * @author Rommin Adl
  */
 public class SortTester {
 
